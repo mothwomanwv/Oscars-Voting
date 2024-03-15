@@ -1,0 +1,130 @@
+/* ======= GENERAL CSS ======= */
+* {
+    box-sizing: border-box;
+}
+
+/* :root {
+    --font-family: ;
+} */
+
+body {
+    font-family: sans-serif;
+}
+
+/* ======= MAIN CSS ======= */
+
+.container {
+    border: 2px dashed gray;
+}
+
+.voting-container {
+    border: 2px dashed #d4d46c;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+/* col that holds numbers */
+.num-col {
+    border: 2px solid orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+/* actual numbers */
+.num-rank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    margin: 10px 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.sortable-list {
+    border: 3px solid blue;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85vw;
+    margin: 10px 0;
+}
+
+.movie-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px dashed pink;
+    margin: 10px 0;
+    border-radius: .5rem;
+    width: 95%;
+    height: 10vh;
+    cursor: grab;
+    background-color: #f6f6f6;
+    box-shadow: #00000030 0px 5px 10px, #0000003b 0px 3px 3px;
+    /* for drag and drop animation 
+    margin and margin-top moved numbers ---- come back to this*/
+    transition: margin-bottom 0.5s;    
+}
+
+.movie-poster {
+    width: 50px;
+    margin: auto 20px;
+}
+
+.title-div {
+    border: 3px dashed green;
+    width: 100%;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+.icons {
+    border: 1px dashed purple;
+}
+
+.arrows {
+    height: 100%;
+    display: flex;
+    padding: 10px;
+}
+
+.arrow-up:hover, .arrow-down:hover {
+    filter: invert();
+}
+
+.arrow-up {
+    margin-right: 10px
+}
+
+
+
+/*========= DRAGGING =======*/
+.dragging {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0) scale(1.05);
+    animation: scaleit 0.1s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.dragging .title-div {
+    color: red;
+}
+
+
+
+/*========= ARROW BTNS =======*/
+
+/* .moving {
+    animation-duration: 0.4s;
+    animation-name: slide;
+} */

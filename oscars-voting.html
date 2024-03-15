@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/normalize.css" rel="stylesheet" >
+    <link href="css/oscars.css" rel="stylesheet">
+    <title>Oscars Voting</title>
+</head>
+<body> 
+
+    <header>
+        <h3 style="text-align: center;">TEMP HOME BUTTON <br> --LOGO HERE LATER--</h3>
+    </header>
+
+    <div class="container">
+
+        <!-- DROPDOWN -->
+        <label for="select-lists">Choose an Oscars Best Picture category to rank: </label>
+        <select name="select-lists" id="select-lists">
+            <option value="">--Please choose an option--</option>
+            <optgroup label="Nominees">
+                <option value="noms-2024" data-id="8293847">2024</option>
+                <option value="noms-2023" data-id="8293852">2023</option>
+            </optgroup>
+            <optgroup label="Winners">
+                <option value="wins-2015-24" data-id="8293848">2015 - 2024</option>
+                <option value="wins-2005-14" data-id="8293849">2005 - 2014</option>
+            </optgroup>
+        </select>
+
+        <h1>Best Picture Ranked Voting</h1>
+            
+        <div class="voting-container">
+
+            <div class='num-col'>
+            </div>
+
+            <div class="sortable-list">
+                <!-- <div class="movie-div">test</div> -->
+            </div> 
+
+        </div><!-- end .voting-container -->
+
+        <!-- call subitVote function on click -->
+        <button onclick="submitVote()">Submit Vote</button>
+        <button onclick="calcWinner()">Calculate Winner</button>
+
+    </div> <!-- end .container -->
+
+
+    <!-- JS -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/oscars.js"></script>
+ 
+</body>
+</html>
